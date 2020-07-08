@@ -4,14 +4,18 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
-export const modal = document.createElement('div');
-modal.id = 'modal';
-document.body.appendChild(modal);
+import { BrowserRouter } from 'react-router-dom';
+
+// export const modal = document.createElement('div');
+// modal.id = 'modal';
+// document.body.appendChild(modal);
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <BrowserRouter>
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>
+  </BrowserRouter>,
   document.getElementById('root'),
 );
 
