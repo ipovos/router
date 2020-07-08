@@ -15,7 +15,12 @@ class App extends React.Component {
 
   render() {
     return (
-      <div style={{ overflow: 'hidden' }}>
+      <div
+        style={{ overflow: 'hidden' }}
+        onClick={(event) => {
+          console.log(event);
+        }}
+      >
         <h1>App</h1>
         <button type="button" onClick={this.toggleModal}>
           Buy!
@@ -30,6 +35,10 @@ class App extends React.Component {
                 left: 0,
                 bottom: 0,
                 background: 'rgba(0,0,0,0.5)',
+              }}
+              onClick={(event) => {
+                console.log('перехват');
+                event.stopPropagation();
               }}
             >
               <p>Buy form</p>
